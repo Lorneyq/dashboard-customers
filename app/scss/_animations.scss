@@ -1,0 +1,57 @@
+@keyframes more-btn--open{
+    0%{
+        left: 20px;
+        transform: rotate(0deg)
+    };
+    100%{
+        left: 200px;
+        transform: rotate(-180deg)
+    };
+}
+
+@keyframes more-btn--close{
+    0%{
+        left: 200px;
+        transform: rotate(-180deg)
+    };
+    100%{
+        left: 20px;
+        transform: rotate(0deg)
+    };
+}
+
+// @keyframes nav-active--open{
+//     0%{
+//         width: 150px;
+//     };
+//     100%{
+//         width: 220px;
+//     };
+// }
+@keyframes nav-active--close{
+    0%{
+        width: 220px;
+    };
+    100%{
+        width: 60px;
+    };
+}
+
+
+
+@keyframes appearance{
+    0%{
+        opacity: 0;
+    };
+    100%{
+        opacity: 1;
+    };
+}
+@keyframes disappearance{
+    0%{
+        opacity: 1;
+    };
+    100%{
+        opacity: 0;
+    };
+}

@@ -1,0 +1,285 @@
+@media (min-height: 1080px) {
+  .nav {
+    &__more-btn {
+      bottom: 200px;
+    }
+    &__profile {
+      bottom: 76px;
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .costumers {
+    &__body {
+      margin-left: 130px;
+    }
+    &__box {
+      width: 96%;
+    }
+  }
+  .nav {
+    width: 80px;
+    padding-right: 0;
+    transition: all 0.3s;
+    position: absolute;
+    .logo {
+      padding-left: 17px;
+      padding-top: 28px;
+      img {
+        margin-right: 0;
+        width: 40px;
+        height: 40px;
+      }
+      span {
+        animation-name: disappearance;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+      }
+    }
+    span {
+      display: none;
+    }
+    &__list {
+      margin-left: 10px;
+    }
+    &__item {
+      width: 60px;
+      padding: 0;
+      padding-right: 23px;
+      padding-left: 5px;
+      margin-bottom: 16px;
+      transition: all 0.3s;
+      &:hover {
+        background-color: white;
+        &.active {
+          background-color: $favorite;
+        }
+      }
+      &::after {
+        right: 4px;
+      }
+    }
+    &__link {
+      svg {
+        width: 32px;
+        height: 50px;
+        margin-right: 0;
+      }
+    }
+    &__ico-wrap {
+      height: 50px;
+    }
+    &__more-btn {
+      display: block;
+      animation-name: more-btn--close;
+      animation-duration: 0.3s;
+      animation-fill-mode: forwards;
+    }
+    &__profile {
+      margin-left: 16px;
+      align-items: flex-end;
+    }
+    &__profile-info {
+      display: none;
+      padding-bottom: 2px;
+      animation-name: disappearance;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+    }
+    &.open,
+    &__item:hover {
+      width: 250px;
+      box-shadow: 0px 10px 60px rgb(0 0 0);
+      transition: all 0.3s;
+      span {
+        display: inline;
+        animation-name: appearance;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+      }
+      .logo {
+        span {
+          animation-name: appearance;
+          animation-duration: 1s;
+          animation-fill-mode: forwards;
+        }
+      }
+      svg {
+        margin-right: 10px;
+      }
+      .nav__item {
+        width: 220px;
+        &::after {
+          display: inline;
+          animation-name: appearance;
+          animation-duration: 0.5s;
+          animation-fill-mode: forwards;
+        }
+        &.Dashboard {
+          &::after {
+            display: none;
+          }
+        }
+      }
+      .nav__more-btn {
+        animation-name: more-btn--open;
+        animation-duration: 0.3s;
+        animation-fill-mode: forwards;
+      }
+      .nav__profile-info {
+        display: block;
+        animation-name: appearance;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .costumers {
+    &__box {
+      width: 100%;
+      padding-right: 20px;
+    }
+    &__box-main {
+      overflow: scroll;
+      overflow-y: hidden;
+      max-width: 860px;
+      width: 100%;
+      &::-webkit-scrollbar {
+        background-color: #ddd;
+        border-radius: 8px;
+        height: 5px;
+        overflow: hidden;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: $favorite;
+        border-radius: 8px;
+      }
+      table {
+        width: 120%;
+      }
+    }
+    .switch-btn{
+      &:hover{
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 854px) {
+  .costumers {
+    &__box-top,
+    &__box-footer {
+      flex-direction: column;
+      align-items: normal;
+    }
+    &__box-main {
+      table {
+        width: 190%;
+      }
+      tr {
+        width: 97%;
+      }
+    }
+    &__body {
+      .search {
+        margin-top: 15px;
+      }
+      .switch-buttons {
+        margin-top: 15px;
+      }
+    }
+    &__box-showing-info {
+      max-width: 100%;
+    }
+    &__wrap {
+      max-width: 100%;
+    }
+  }
+}
+
+@media (max-width: 586px) {
+  .costumers {
+    &__body {
+      margin-left: 110px;
+      .switch-buttons {
+        text-align: center;
+      }
+    }
+    &__box{
+      padding-right: 5px;
+    }
+    &__box-top{
+      padding-left: 0;
+      padding-right: 0;
+      text-align: center;
+      .search{
+        margin: 0 auto;
+        margin-top: 15px;
+      }
+    }
+    &__box-main {
+      table {
+        width: 325%;
+      }
+    }
+    &__box-footer{
+      padding-left: 0;
+      padding-right: 0;
+    }
+    &__box-showing-info{
+      text-align: center;
+    }
+    .switch-btn{
+      margin-right: 6px;
+      &:nth-child(4), &:nth-child(5){
+        display: none;
+      }
+      &:last-child{
+        margin-right: 0;
+      }
+    }
+  }
+  .user-welcome {
+    span {
+      max-width: 150px;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .costumers {
+    &__body{
+      margin-left: 100px;
+    }
+    &__box{
+      margin-top: 30px;
+    }
+    &__box-main {
+      table {
+        width: 450%;
+      }
+    }
+    &__box-showing-info{
+      font-size: 11px;
+    }
+    &__box-title{
+      font-size: 20px;
+      line-height: 30px;
+    }
+    .search{
+      width: 170px;
+    }
+  }
+  .user-welcome {
+    font-size: 22px;
+    line-height: 33px;
+    span {
+      max-width: 100px;
+    }
+  }
+}
