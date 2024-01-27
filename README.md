@@ -42,4 +42,4 @@ That's it, the whole project is up and running. Congratulations!🎉🥳
 
 👉[Live demo](https://dashboard-customers.vercel.app/)
 
-![Dashboard Customers demo](https://lorneyq.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdashboard-customers.889b9dee.jpg&w=1920&q=75)
+![Dashboard Customers demo](https://api-lorneyq.online/media/projects/dashboard-customers.jpg)
